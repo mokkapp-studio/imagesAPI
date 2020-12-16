@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Row, Col, Image } from 'antd';
 
 const ListadoImágenes = ({listaImg}) => {
@@ -37,13 +37,30 @@ const ListadoImágenes = ({listaImg}) => {
                     <Image
                          style={{
                             width: '200px',
-                            height: '120px'
+                            height: '120px',
+                            cursor: 'pointer',
 
                         }}
                         src={imagen.largeImageURL} alt="img"
                         />
                 </div>
-                <p>{imagen.tags}</p>
+                <div 
+                    style={{
+                        height: '5em',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}
+
+                >
+                    <p
+                        style={{
+                            fontSize: '12px',
+                            fontFamily: 'avenir'
+                        }}
+                    >{imagen.tags}</p>
+                </div>
+                
                 </div>
                    
                     
